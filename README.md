@@ -16,3 +16,10 @@ Pre-Requisists
 4) Using Rich Text Editor in community compoenents  to place the content & text & formatting with styling.
 5) All Images needs to be either in Static Resources to use in Aura Cmps
 6) To use in community, drag & drop or copy & paste into Rich Text Editor
+
+This Repository contains 
+
+ZIP files of Resources/Images/Content used ;
+Codes snippets of various cmps used
+Screenshots;
+Instructions with Screenshots;
