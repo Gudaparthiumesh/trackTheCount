@@ -1,0 +1,60 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" controller="Covid19_Status_Tracker_ctrl" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="myData" type="Object"/>
+    <aura:attribute name="myDataDup" type="Object"/>
+    <aura:attribute name="myColumns" type="List"/>
+    <aura:attribute name="sortedBy" type="String"/>
+    <aura:attribute name="sortedDirection" type="String" default="asc"/>
+    <aura:attribute name="showMessage" type="Boolean" default="false"/>
+    <aura:attribute name="SearchValue" type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <div class="exampleHolder">
+            <lightning:spinner alternativeText="Loading" size="medium" />
+        </div>
+    </aura:if>
+    <div class="slds-box slds-theme_default expand" >
+        <div class="slds-clearfix">
+            <div class="slds-float_right">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-form-element slds-size_10-of-12">
+                        <div class="slds-input-has-icon slds-input-has-icon_right">
+                            <lightning:input value="{!v.SearchValue}" placeholder="Search by Country" type="text" label="" name="Search" onchange="{!c.searchByCountry}"/>
+                        </div> 
+                    </div>
+                    <div class="slds-col slds-form-element slds-size_1-of-12" style="margin-top: 10%;">
+                        <a onclick="{!c.doInit}" title="Refresh">
+                            <lightning:icon iconName="utility:refresh" 
+                                            size="small"
+                                            class="slds-button__icon "/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.myDataDup.length != 0}">
+            <div style="height:350px">
+                <lightning:datatable data="{!v.myDataDup}"
+                                     columns="{!v.myColumns }"
+                                     keyField="Country"
+                                     hideCheckboxColumn="true"
+                                     resizeColumnDisabled= "false"
+                                     autoWidth="true"
+                                     onsort="{!c.updateColumnSorting}"
+                                     onloadmore="{!c.handleLoadMore}"
+                                     sortedBy="{!v.sortedBy}"  
+                                     sortedDirection="{!v.sortedDirection}"
+                                     />
+            </div>
+            <aura:set attribute="else">
+                <aura:if isTrue="{!v.showMessage}">
+                    <div align="Center" style="font-size: 20px;">
+                        No Result Found...
+                        <br></br>
+                    </div>
+                </aura:if>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>
