@@ -1,0 +1,38 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable,forceCommunity:availableForAllPageTypes">
+    <div class="slds-align_absolute-center" style="width:60%">
+        <lightning:carousel disableAutoRefresh="true" >
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his1.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his2.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his3.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his4.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his5.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his6.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his7.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                                     src="{!$Resource.historyPandemeicCarousel +'/HistoryCarousel/his8.jpg'}"
+                                     href = "https://www.google.com">
+            </lightning:carouselImage>
+        </lightning:carousel>
+    </div>
+</aura:component>
