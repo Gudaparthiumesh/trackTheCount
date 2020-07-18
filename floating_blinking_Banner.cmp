@@ -1,0 +1,5 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <span class="slds-text-heading_small slds-align_absolute-center slds-text-color_inverse flashing"><i>Important Note : <br/>
+        Corona Virus (COVID-19) is rapidly spreading pandemic disease that is causing great threat to mankind all-over the Globe. BE SAFE | BE HEALTHY | BE CAUTIOUS
+        </i></span>
+</aura:component>
